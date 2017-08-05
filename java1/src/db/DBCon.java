@@ -15,7 +15,7 @@ public class DBCon {
 	private String driver = "org.mariadb.jdbc.Driver";
 	private String url = "jdbc:mariadb://localhost:3306/study";
 	private String id = "root";
-	private String pwd = "rnfma1";
+	private String pwd = "1234";
 	
 	public DBCon(){
 		try {
@@ -26,6 +26,10 @@ public class DBCon {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public Connection getCon() {
+		return con;
 	}
 	
 	private void dBConnecte() throws SQLException {
@@ -65,5 +69,6 @@ public class DBCon {
 	}
 
 	public static void main(String[] args) {
+		
 	}
 }
